@@ -6,7 +6,7 @@ Basically me trying to teach [Pooblic](https://github.com/pooblic) users program
 2. [Java Fundamentals](summaries/2-java-fundamentals.md)
 3. Methods and Classes
 
-## Homework
+## Homework (and solutions)
 1. [Hello World!](https://github.com/JavaForRetards/lesson1-homework)
 2. [Array sorting](https://github.com/JavaForRetards/lesson2-homework)
 
