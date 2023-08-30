@@ -1,5 +1,5 @@
 # Lesson 3: Methods and Classes
-In this lesson we covered the concepts of methods and classes, and first introduced some notions of Object-Oriented Programming. After this lesson, you effectively know all you need to make a functional Java program. After this one, you probably won
+In this lesson we covered the concepts of methods and classes, and first introduced some notions of Object-Oriented Programming. After this lesson, you effectively know all you need to make a functional Java program.
 
 Here's a summary of information about the key concepts of the course, and as usual, some optional links to dwelve deeper into the subject.
 
