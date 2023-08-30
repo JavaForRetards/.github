@@ -95,7 +95,7 @@ public class Cat {
 	
 	void call() {
 		//String.format is more efficient than String concatenation
-		System.out.println(String.format("Come here, %s!", this.name));
+		System.out.printf("Come here, %s!", this.name);
 		//this is equivalent to
 		//System.out.println("Come here, " + this.name + "!");
 	}
@@ -167,7 +167,7 @@ public class Dog {
 	}
 	
 	void call() {
-		System.out.println(String.format("Come here, %s!", this.name));
+		System.out.printf("Come here, %s!", this.name);
 	}
 	
 	void ageUp() {
@@ -201,7 +201,7 @@ public class Animal {
 	public void makeSound() {}
 	
 	public void call() {
-		System.out.println(String.format("Come here, %s!", this.name));
+		System.out.printf("Come here, %s!", this.name);
 	}
 	
 	public void ageUp() {
@@ -279,7 +279,7 @@ public abstract class Animal {
 	public abstract void makeSound();
 	
 	public void call() {
-		System.out.println(String.format("Come here, %s!", this.name));
+		System.out.printf("Come here, %s!", this.name);
 	}
 	
 	public void ageUp() {
@@ -324,7 +324,7 @@ public abstract class Animal implements IScientificallyNameable {
 	}
 		
 	public void call() {
-		System.out.println(String.format("Come here, %s!", this.name));
+		System.out.printf("Come here, %s!", this.name);
 	}
 	
 	public void ageUp() {
@@ -467,7 +467,7 @@ public enum LegNumber {
 	}
 	
 	public void printLegNumber() {
-		System.out.println("This animal has %s legs!", this.legNumberName);
+		System.out.printf("This animal has %s legs!", this.legNumberName);
 	}
 }
 ```
@@ -487,7 +487,7 @@ public abstract class Animal implements IScientificallyNameable {
 	}
 		
 	public void call() {
-		System.out.println(String.format("Come here, %s!", this.name));
+		System.out.printf("Come here, %s!", this.name);
 	}
 	
 	public void ageUp() {
