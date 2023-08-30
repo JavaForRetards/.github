@@ -1,8 +1,6 @@
 # Lesson 2: Java Fundamentals
 In this lesson we covered the basic constructs of the Java programming language, the building blocks that make up the majority of programs. Here's a summary of information about the key concepts of the course, and as usual, some optional links to dwelve deeper into the subject.
 
-You can also see in the attached file the examples I wrote during the lesson.
-
 ## Variables
 - A variable is, put simply, a stored value you assign a mnemonic name to. A declaration looks like this: `int x = 1;`. In the example, I declared a variable named `x`, of `int` (integer) type and assigned it a value of `1`.
 - In Java, variables are always mutable; this is true in most programming languages, but it's not a given (for instance, Rust makes a distinction between variables and "mutable" variables). You may create a *constant* - a stored unchangeable value with a mnemonic name - by using the keyword `final`, as in `final int x = 1;`.
