@@ -175,7 +175,7 @@ public class Dog {
 	}
 	
 	static void printScientificName() {
-		System.out.println("Canis familiaris);
+		System.out.println("Canis familiaris");
 	}
 }
 ```
@@ -239,7 +239,7 @@ public class Dog extends Animal {
 	
 	@Override
 	public void printScientificName() {
-		System.out.println("Canis familiaris);
+		System.out.println("Canis familiaris");
 	}
 }
 ```
@@ -249,9 +249,9 @@ Isn't that much cleaner? Now we can do this:
 ```java
 public static void main(String[] args) {
 	Animal[] arr = new Animal[3];
-	Animal[0] = new Cat("Mr. Whiskers", 5);
-	Animal[1] = new Cat("Fluffles", 3);
-	Animal[2] = new Dog("Buster", 3);
+	arr[0] = new Cat("Mr. Whiskers", 5);
+	arr[1] = new Cat("Fluffles", 3);
+	arr[2] = new Dog("Buster", 3);
 	
 	for(Animal a : arr) {
 		a.call();
@@ -360,7 +360,7 @@ public class Dog extends Animal implements ITalkative {
 	
 	@Override
 	public void printScientificName() {
-		System.out.println("Canis familiaris);
+		System.out.println("Canis familiaris");
 	}
 }
 ```
@@ -370,9 +370,9 @@ As `Animal` implements `IScientificallyNameable`, all its children will implemen
 ```java
 public static void main(String[] args) {
 	Animal[] arr = new Animal[3];
-	Animal[0] = new Cat("Mr. Whiskers", 5);
-	Animal[1] = new Cat("Fluffles", 3);
-	Animal[2] = new Dog("Buster", 3);
+	arr[0] = new Cat("Mr. Whiskers", 5);
+	arr[1] = new Cat("Fluffles", 3);
+	arr[2] = new Dog("Buster", 3);
 	
 	for(Animal a : arr) {
 		a.printScientificName(); //we can do this as all Animals are nameable
@@ -527,7 +527,7 @@ public class Dog extends Animal implements ITalkative {
 	
 	@Override
 	public void printScientificName() {
-		System.out.println("Canis familiaris);
+		System.out.println("Canis familiaris");
 	}
 }
 ```
