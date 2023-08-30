@@ -69,12 +69,38 @@ What would be the values of `a` and `b` at the end of `main`? They'd also be unc
 
 In Java, when you pass a variable as argument, what methods actually receive as arguments is a *copy* of whatever is on the stack for that variable. Remember last lesson? Primitives have their own value stored on the stack, so the last example is unchanged because I only swapped copies, not the actual variables. Arrays and objects store a *reference* to their memory area instead. This means that only the *reference* is copied. In the very first case, we are accessing the reference to change a value of the original array, so the original array changes accordingly. In the second case, we are overwriting the *reference* (not the object itself!) with a new declaration: thus, the original array remains unchanged.
 
+You can have multiple methods of the same name, provided that they have different arguments. This is often use to provide multiple versions of a same method, providing default values as a shorthand, like this:
+
+```java
+public static void fun(int a, int b) {
+	//do stuff
+}
+
+static void fun(int a) {
+	fun(a, 1);
+}
+```
+
+Finally, you sometimes don't know how many arguments a method is going to take. This is where *varargs* step in. After all other arguments are defined, you can say that your method takes in an infinite number of arguments of a given kind. The method will treat the unspecified-number arguments as an array. For example:
+
+```java
+public static void main(String[] args) {
+	fun(5, "hello", "world");
+}
+
+static void fun(int someArgument, String... others) {
+	System.out.printf("someArgument value: %d\n", someArgument);
+	for(String s : others)
+		System.out.println(s);
+}
+```
+
 ## Classes
 Classes are the key to Java. Understand classes well, and you'll have Object-Oriented Programming figured out. In the simplest possible terms, a class is a collection of data and code. In more practical terms, they are a way to represent logical categories for your data. In Java, each class is its own file, unless it's an *inner class* (more on that later).
 
 A class may contain *members* - that is, methods and *fields* (variables) that are tied to each class' *instance*. What does this mean? Think of a class as the blueprints for its *instances* - that is, the objects of the type defined by the class. For example, you might have a `Cat` class, defining what a cat is and what it can do; let's say you'd stipulate in the class that each cat must necessarily have a name (a `String`) and an age (an `int`), and that it should be able to meow. You might then create an instance representing a 5-years-old `Cat` called "Mr. Whiskers", and then another one representing a 3-years-old cat called "Fluffles".
 
-If all cats must have a name and an age, then you must ask whoever is creating the `Cat` instance to specify them. You do that via a special method called *constructor*, which takes as arguments whatever values are required to create the instance and handles whatever extra logic is needed to create it (there isn't any in our example, but you can easily imagine that it could occasionally be needed). Other programming languages also require you to create a method called a *destructor*, but that is not needed in Java¹.
+If all cats must have a name and an age, then you must ask whoever is creating the `Cat` instance to specify them. You do that via a special method called *constructor*, which takes as arguments whatever values are required to create the instance and handles whatever extra logic is needed to create it (there isn't any in our example, but you can easily imagine that it could occasionally be needed). Other programming languages also require you to create a method called a *destructor*, but that is not needed in Java¹. You may also overload constructors, and you can reference another constructor *within a constructor* by calling `this()`.
 
 Let's go and implement what I just described:
 
