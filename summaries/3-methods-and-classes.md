@@ -193,7 +193,7 @@ public class Animal {
 	protected final String name;
 	protected int age;
 	
-	protected Dog(String name, int age) {
+	protected Animal(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
@@ -271,7 +271,7 @@ public abstract class Animal {
 	protected final String name;
 	protected int age;
 	
-	protected Dog(String name, int age) {
+	protected Animal(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
@@ -318,7 +318,7 @@ public abstract class Animal implements IScientificallyNameable {
 	protected final String name;
 	protected int age;
 	
-	protected Dog(String name, int age) {
+	protected Animal(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
@@ -478,9 +478,9 @@ Now let's adjust the other classes to work with this `enum`:
 public abstract class Animal implements IScientificallyNameable {
 	protected final String name;
 	protected int age;
-	protected final legNumber;
+	protected final LegNumber legNumber;
 	
-	protected Dog(String name, int age, LegNumber legNumber) {
+	protected Animal(String name, int age, LegNumber legNumber) {
 		this.name = name;
 		this.age = age;
 		this.legNumber = legNumber;
