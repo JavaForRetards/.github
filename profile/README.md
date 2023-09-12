@@ -5,10 +5,13 @@ Basically me trying to teach [Pooblic](https://github.com/pooblic) users program
 1. [Introduction to Programming](summaries/1-introduction.md)
 2. [Java Fundamentals](summaries/2-java-fundamentals.md)
 3. [Methods and Classes](summaries/3-methods-and-classes.md)
+4. [Methods and Classes II](summaries/4-methods-and-classes-2.md)
 
 ## Homework (and solutions)
 1. [Hello World!](https://github.com/JavaForRetards/lesson1-homework)
 2. [Array sorting](https://github.com/JavaForRetards/lesson2-homework)
+3. [Class inheritance](https://github.com/JavaForRetards/lesson3-homework/)
+4. **Generics** - soon!
 
 ## Useful downloads
 Must-haves are:
