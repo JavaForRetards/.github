@@ -1,5 +1,5 @@
 # Lesson 4: Methods and Classes II
-In this less we pick up where we left off last time, to cover some more advanced topics related to classes. This lesson effectively concludes the part of the course related to syntax. After this, you should be able to effectively read any bit of Java (8) code that comes your way. While this is not the end of the course, you now have the ability to effectively learn by reading what others have made. While a course-like environment helps you pick up the pace, you *do* learn the most on the field: there is no replacement for experience, as I said, but studying actual (good) code in action comes pretty close.
+In this lesson we pick up where we left off last time, to cover some more advanced topics related to classes and abstraction. This lesson effectively concludes the part of the course related to syntax. After this, you should be able to effectively read any bit of Java (8) code that comes your way. While this is not the end of the course, you now have the ability to effectively learn by reading what others have made. While a course-like environment helps you pick up the pace, you *do* learn the most on the field: there is no replacement for experience, as I said, but studying actual (good) code in action comes pretty close.
 
 Here's a summary of the topics covered by this lesson, as usual.
 
