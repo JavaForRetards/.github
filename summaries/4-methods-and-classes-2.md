@@ -76,11 +76,11 @@ System.out.println(example.getField()); //prints "1"
 otherExample = example; //this is an error! they aren't the same type!
 ```
 
-Now let's suppose the opposite situation; we have (let's say we got it the JDK or some other library) some instances of a *parameterised* class - that is, a class with a generic - but really don't care about their generic types at all. In fact, they are getting in the way, because we'd like to store them all in an array - which we can't do, because they are parameterised.
+Now let's suppose the opposite situation; we have (let's say we got them from the JDK or some other library) some instances of a *parameterised* class - that is, a class with a generic - but really don't care about their generic types at all. In fact, they are just getting in the way, because we'd like to store them all in an array - which we can't do, because they have different parameters and thus are considered of different types.
 
-There are actually two solutions to this problem; we can use *raw types* or *wildcards*. Raw types are considered to be bad practice, so you really shouldn't do that, but I'm still showing you because you may encounter that. Both compile and work completely fine, but wildcards are to be preferred as they are more explicit in what they do.
+There are actually two solutions to this problem; we can use *raw types* or *wildcards*. Raw types are considered to be bad practice, so you really shouldn't do that. Both compile and work completely fine, but wildcards are to be preferred as they are more explicit in what they do.
 
-To use the type "raw" essentially means to make a declaration stripped of the generic. It looks something like this:
+Using a parameterised type "raw" simply means to make a declaration without specifying the type parameter. It looks something like this:
 
 ```java
 YourClass example = new YourClass("hello");
@@ -117,7 +117,7 @@ public void badMethod() {
 Local classes considerably worsen the readability of your code, and I have yet to found a genuine use for them. I've only ever seen them used once in some obscure part of the Minecraft code - of course, if there is something awful you can do in Java, it's common practice over at Mojang.
 
 ### Anonymous classes
-Also evil, but slightly less since they serve a genuine purpose, are anonymous classes. Anonymous classes allow you to declare instances of abstract classes and interface on the fly and to use them quickly. Let's say you have a class called `YourClassRegistry`, which just stores instances of `AbstractYourClass` via a `register()`. `AbstractYourClass` looks like this:
+Also evil, but slightly less since they serve a genuine purpose, are anonymous classes. Anonymous classes allow you to declare and use instances of abstract classes and interfaces on the fly, without writing children classes properly. Let's say you have a class called `YourClassRegistry`, which just stores instances of `AbstractYourClass` via a `register()`. `AbstractYourClass` looks like this:
 
 ```java
 public class AbstractYourClass {
@@ -182,7 +182,7 @@ try {
 
 The code within the `try` block will be executed either until completion or until an exception of type `SomeException` (or one of its children types) is thrown. In the second case, the execution of the `try` block is aborted, and the program moves on to the contents of the `catch` block, which are instead skipped in the first case. 
 
-The `catch` block must specify some kind of `Throwable`; anything that is *thrown* within the method that matches the specified type will be caught. As a result, `Exception` will catch every exception that happens during normal execution, and catching `Throwable` will catch literally everything. Nonetheless, this is considered bad practice: you should always only catch strictly what you need. Sometimes, it's better for the program to crash than to continue on in a degraded state.
+The `catch` block must specify some kind of `Throwable`; anything that is *thrown* within the `try` block that matches the specified type will be caught. As a result, `Exception` will catch every exception that happens during normal execution, and catching `Throwable` will catch literally everything. Nonetheless, this is considered bad practice: you should always only catch strictly what you need. Sometimes, it's better for the program to crash than to continue on in a degraded state.
 
 You can also `catch` multiple types of exception for the same `try` block:
 
@@ -300,4 +300,4 @@ You specify the class name only if the methods are static; if they weren't we wo
 This is all very handy, and the good news is that you almost never need to write your own functional interfaces. Java provides a lot of built in ones, all within the `java.function` package: `Runnable` (no args, no return), `Supplier` (no args, one return value), `Consumer` (one argument, one return value), `Function` (one argument, one return value), `BiFunction` (two arguments, one return value) and many others.
 
 ## Afterword
-The contents of this less might seem tremendously abstract to you. Fear not, though: you'll see them at work in the next lesson, which will be focused on some common solutions to problems offered by JDK. For now, focus on truly understanding what you did so far. Next lesson will be comparatively very easy: the worst is behind us.
+The contents of this lesson might seem tremendously abstract to you right now. Fear not, though: you'll see them at work in the next one, which will be focused on some commonly used features of the JDK. For now, focus on truly understanding what you did so far. Next lesson will be comparatively very easy: the worst is behind us.
