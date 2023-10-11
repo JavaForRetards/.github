@@ -6,7 +6,7 @@ Here's a summary of the topics covered by this lesson, as usual.
 ## Advanced abstraction
 Last lesson, we learned that we children of a class *can* be treated as if they belonged to their parent. As it happens, all classes in Java implicitly extend a special class: `Object`. 
 
-`Object` provides a number of default methods as well, but you needn't concern yourself with those for now. What matters to us is the implication of this: `Object` effectively becomes something capable of storing *any* reference. A variable that is declared as being of `Object` can effectively store any type of value:
+`Object` provides a number of default methods as well, but you needn't concern yourself with those for now. What matters to us is that `Object` effectively becomes a type capable of storing *any* reference. A variable that is declared as being of `Object` can effectively store any type of value:
 
 ```java
 Object a = 1; //remember? "Integer" is a class as well, equivalent but separate from "int"! 
